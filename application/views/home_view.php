@@ -9,12 +9,12 @@ $full_name = $CI->session->userdata('full_name');
 
 <div class="container paddingT75">
     <div class="row">
-        <div class="col-md-7">
-            <p >Name: <?php echo $full_name;?></p>
+        <div class="col-md-8">
+            <p ><b>Name: <?php echo $full_name;?></b></p>
             <p >Student ID: <?php echo $username;?></p>
             <p >Feedback Detail:</p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <p class="custom-message-box">[ Provided feedback will be stored without credential of student (anonymous feedback) ]</p>
         </div>
     </div>

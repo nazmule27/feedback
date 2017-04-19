@@ -74,7 +74,7 @@ class Super_admin_home extends CI_Controller
         $this->pdf->AddPage();
         $this->pdf->SetWidths($w);
         $this->pdf->SummeryFeedbackTable($header,$w,$data);
-        $this->pdf->Output('course_feedback_summery.pdf', 'I');
+        $this->pdf->Output('course_feedback_summery_'.$cid.'.pdf', 'I');
     }
     public function course_feedbackComments_pdf($cid, $semid){
         $_SESSION["report_name"]='Course Feedback Comments for '.$cid.' in Semester '.$semid;
@@ -87,7 +87,7 @@ class Super_admin_home extends CI_Controller
         $this->pdf->AddPage();
         $this->pdf->SetWidths($w);
         $this->pdf->CourseFeedbackComments($header,$w,$data);
-        $this->pdf->Output('course_feedback_comments.pdf', 'I');
+        $this->pdf->Output('course_feedback_comments_'.$cid.'.pdf', 'I');
     }
 
     public function instructor_feedback_pdf($tid, $cid, $semid){
@@ -114,7 +114,7 @@ class Super_admin_home extends CI_Controller
         $this->pdf->AddPage();
         $this->pdf->SetWidths($w);
         $this->pdf->CourseFeedbackComments($header,$w,$data);
-        $this->pdf->Output('instructor_feedback_comments.pdf', 'I');
+        $this->pdf->Output('instructor_feedback_comments_'.$cid.'_'.$tid.'.pdf', 'I');
     }
 
     public function exit_feedback_summery() {

@@ -11,7 +11,11 @@ $full_name = $CI->session->userdata('full_name');
     <div class="row">
         <div class="col-md-12 col-ms-12 col-xs-12">
             <h4>Feedback Summary on course '<?php echo $course_name[0]->course_name; ?>'</h4>
-            <a class="download-pdf" href="<?php echo base_url().'instructor_home/course_feedback_pdf/'.$course_id.'/'.$semester_id ?>"><img src="<?=base_url();?>assets/img/pdfIcon.png" alt=""></a>
+            <?php if($role=='teacher') { ?>
+                <a class="download-pdf" href="<?php echo base_url().'instructor_home/course_feedback_pdf/'.$course_id.'/'.$semester_id ?>"><img src="<?=base_url();?>assets/img/pdfIcon.png" alt=""></a>
+            <?php } else if ($role=='superadmin') {?>
+                <a class="download-pdf" href="<?php echo base_url().'super_admin_home/course_feedback_pdf/'.$course_id.'/'.$semester_id ?>"><img src="<?=base_url();?>assets/img/pdfIcon.png" alt=""></a>
+            <?php }?>
             <br>
             <table class="table">
                 <thead>
@@ -85,7 +89,11 @@ $full_name = $CI->session->userdata('full_name');
                 </div>
             </div>
             <h4>Comments:
-                <a class="download-pdf" href="<?php echo base_url().'instructor_home/course_feedbackComments_pdf/'.$course_id.'/'.$semester_id ?>"><img src="<?=base_url();?>assets/img/pdfIcon.png" alt=""></a>
+                <?php if($role=='teacher') { ?>
+                    <a class="download-pdf" href="<?php echo base_url().'instructor_home/course_feedbackComments_pdf/'.$course_id.'/'.$semester_id ?>"><img src="<?=base_url();?>assets/img/pdfIcon.png" alt=""></a>
+                <?php } else if ($role=='superadmin') {?>
+                    <a class="download-pdf" href="<?php echo base_url().'super_admin_home/course_feedbackComments_pdf/'.$course_id.'/'.$semester_id ?>"><img src="<?=base_url();?>assets/img/pdfIcon.png" alt=""></a>
+                <?php }?>
             </h4>
 
             <br>

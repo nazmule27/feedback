@@ -523,9 +523,11 @@ footer {
 	margin-bottom: 15px;
 }
 .custom-message-box {
+	float: right;
 	padding: 10px;
 	font-size: 16px;
     color: green;
+	text-align: right;
 }
 .form-inline .width500{
     width: 500px;
