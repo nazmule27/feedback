@@ -33,7 +33,7 @@ $full_name = $CI->session->userdata('full_name');
                                 <td><?php echo $k;?></td>
                                 <!--<td><?php /*echo $my_courses[$i]->semester_id*/?></td>-->
                                 <td>
-                                    <?php echo '<a href="'.base_url().'super_admin_home/feedback_summery_course_wise/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'">'.$my_courses[$i]->course_name.' ('.$my_courses[$i]->course_id.') ('.$my_courses[$i]->course_given.')'.' </a>' ?>
+                                    <?php echo '<a href="'.base_url().'super_admin_home/feedback_summery_course_wise/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'">'.$my_courses[$i]->course_name.' ('.$my_courses[$i]->course_id.') ['.$my_courses[$i]->course_given.']'.' </a>' ?>
                                 </td>
                                 <td>
                                     <?php echo '<a href="'.base_url().'super_admin_home/course_feedback_given_list/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'/1'.'">'.'Given List'.'</a>' ?>
@@ -41,7 +41,7 @@ $full_name = $CI->session->userdata('full_name');
                                 <td>
                                     <?php echo '<a href="'.base_url().'super_admin_home/course_feedback_given_list/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'/0'.'">'.'Not Given List'.'</a>' ?>
                                 </td>
-                                <td><?php echo '<a href="'.base_url().'super_admin_home/feedback_summery_teacher_wise/'.$my_courses[$i]->teacher_id.'/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'"> '.$my_courses[$i]->full_name.' ('.$my_courses[$i]->teacher_id.') ('.$my_courses[$i]->instructor_given.')'.'</a>' ?></td>
+                                <td><?php echo '<a href="'.base_url().'super_admin_home/feedback_summery_teacher_wise/'.$my_courses[$i]->teacher_id.'/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'"> '.$my_courses[$i]->full_name.' ('.$my_courses[$i]->teacher_id.') ['.$my_courses[$i]->instructor_given.']'.'</a>' ?></td>
                                 <td>
                                     <?php echo '<a href="'.base_url().'super_admin_home/instructor_feedback_given_list/'.$my_courses[$i]->course_id.'/'.$my_courses[$i]->semester_id.'/'.$my_courses[$i]->teacher_id.'/1'.'">'.'Given List'.'</a>' ?>
                                 </td>
